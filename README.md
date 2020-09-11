@@ -52,4 +52,4 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 5. Use an online [JSON to CSV Converter](https://www.convertcsv.com/json-to-csv.htm) and convert the files to CSV or Excel format.
 
-6. Optional: Merge both Excel files into one spreadsheet and format the spreadsheet into a readable format.
+Optional: Merge both Excel files into one spreadsheet and format the spreadsheet into a readable format.
