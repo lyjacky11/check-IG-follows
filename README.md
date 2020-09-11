@@ -33,7 +33,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 4. Once all the lines start with `userscript.html`, start deleting the content until you have only the information you want to keep.
 
-## Format & Parse JSON
+## Parse JSON to CSV/Excel
 
 1. Use an online [JSON Formatter](https://jsonformatter.curiousconcept.com/) to format the single line JSONs into a readable format.
 
@@ -48,3 +48,8 @@ Check the number of followers and followings on a Instagram account. Also calcul
 - Remove the numbers by finding `^\d+[:]` and replacing it with a blank string using the `Regular expression` search mode.
 - Optional: Tab the JSON file until it has the correct indentation.
 
+4. Validate the JSON files by using the online [JSON Formatter](https://jsonformatter.curiousconcept.com/).
+
+5. Use an online [JSON to CSV Converter](https://www.convertcsv.com/json-to-csv.htm) and convert the files to CSV or Excel format.
+
+6. Optional: Merge both Excel files into one spreadsheet and format the spreadsheet into a readable format.
