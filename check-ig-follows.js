@@ -81,7 +81,7 @@
                   nonFollowings.push(currentUser);
             }
       }
-      console.log("Followers you're not following back: ", nonFollowings);
+      console.log("Followers you're not following back (non-followings): ", nonFollowings);
 
       console.log("Calculating users that aren't following you back... please wait!");
       for (var j = 0; j < followings.length; j++) {
@@ -91,7 +91,7 @@
                   nonFollowers.push(currentUser);
             }
       }
-      console.log("Followings that aren't following you back: ", nonFollowers);
+      console.log("Followings that aren't following you back (non-followers): ", nonFollowers);
 	}
 
 	catch (err) {
