@@ -19,7 +19,9 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 5. Open the browser console (Ctrl + Shift + J on Chrome).
 
-6. You should see the script running in the console. If it's not running, refresh the page and try again.
+6. You should see the script running in the console.
+
+- If it's not running, ensure that the script is turned on in Tampermonkey, refresh the page and try again.
 
 *NOTE: The page must be refreshed manually (Ctrl + F5) every time you want to fetch data.*
 
