@@ -17,13 +17,13 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 4. The URL in the address bar should be: `https://www.instagram.com/{username}`.
 
-5. Open the browser console (Ctrl + Shift + J on Chrome).
+5. Open the browser console (`Ctrl+Shift+J` on Chrome).
 
 6. You should see the script running in the console.
 
 - If it's not running, ensure that the script is turned on in Tampermonkey, refresh the page and try again.
 
-*NOTE: The page must be refreshed manually (Ctrl + F5) every time you want to fetch data.*
+*NOTE: The page must be refreshed manually (`Ctrl+F5`) every time you want to fetch data.*
 
 ## Save Usernames
 
@@ -46,12 +46,12 @@ Check the number of followers and followings on a Instagram account. Also calcul
 - Add a `,` and a new line to each `}` by finding `}` and replacing it with `},\n` using the `Extended` search mode.
 - Add a set of `{` `}` braces as the root JSON element at the top and bottom of the file.
 - Add a JSON property called `users:` under the root element and then a set of `[` `]` braces around the main content.
-- Remove extra text at intervals of 100 (ex. 100th username, 200th username, etc.)
+- Remove the extra text at intervals of 100 users (ex. 100th username, 200th username, etc.).
 - Remove the numbers by finding `^\d+[:]` and replacing it with a blank string using the `Regular expression` search mode.
 - Optional: Tab the JSON file until it has the correct indentation.
 
-4. Validate the JSON files by using the online [JSON Formatter](https://jsonformatter.curiousconcept.com/).
+4. Validate the JSON files using the online [JSON Formatter](https://jsonformatter.curiousconcept.com/).
 
 5. Use an online [JSON to CSV Converter](https://www.convertcsv.com/json-to-csv.htm) and convert the files to CSV or Excel format.
 
-Optional: Merge both Excel files into one spreadsheet and format the spreadsheet into a readable format.
+Optional: Merge the separate Excel files into one spreadsheet and format the spreadsheet into a readable format.
