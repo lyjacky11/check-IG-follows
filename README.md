@@ -38,3 +38,9 @@ Check the number of followers and followings on a Instagram account. Also calcul
 1. Use an online [JSON Formatter](https://jsonformatter.curiousconcept.com/) to format the single line JSONs into a readable format.
 
 2. Save the separate JSON data into individual JSON files.
+
+3. Use Notepad++ `Find & Replace` to get the correct JSON syntax.
+
+- Add a `,` and a new line to each `}` by finding `}` and replacing with `},\n`.
+- Add a set of `{` `}` braces as the root element.
+- Add a JSON property called "users:" and then a set of `[` `]` braces around the content.
