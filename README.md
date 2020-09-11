@@ -32,3 +32,9 @@ Check the number of followers and followings on a Instagram account. Also calcul
 3. Clean up the log file by deleting all the lines that do not start with `userscript.html`.
 
 4. Once all the lines start with `userscript.html`, start deleting the content until you reach the information you want to keep.
+
+## Format & Parse JSON
+
+1. Use an online [JSON Formatter](https://jsonformatter.curiousconcept.com/) to format the single line JSONs into a readable format.
+
+2. Save the separate JSON data into individual JSON files.
