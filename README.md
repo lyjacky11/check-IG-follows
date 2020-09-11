@@ -31,7 +31,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 3. Clean up the log file by deleting all the lines that do not start with `userscript.html`.
 
-4. Once all the lines start with `userscript.html`, start deleting the content until you reach the information you want to keep.
+4. Once all the lines start with `userscript.html`, start deleting the content until you have only the information you want to keep.
 
 ## Format & Parse JSON
 
@@ -39,8 +39,12 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 2. Save the separate JSON data into individual JSON files.
 
-3. Use Notepad++ `Find & Replace` to get the correct JSON syntax.
+3. Use Notepad++ `Find & Replace` feature to get the correct JSON syntax:
 
-- Add a `,` and a new line to each `}` by finding `}` and replacing with `},\n`.
-- Add a set of `{` `}` braces as the root element.
-- Add a JSON property called "users:" and then a set of `[` `]` braces around the content.
+- Add a `,` and a new line to each `}` by finding `}` and replacing it with `},\n` using the `Extended` search mode.
+- Add a set of `{` `}` braces as the root JSON element at the top and bottom of the file.
+- Add a JSON property called `users:` under the root element and then a set of `[` `]` braces around the main content.
+- Remove extra text at intervals of 100 (ex. 100th username, 200th username, etc.)
+- Remove the numbers by finding `^\d+[:]` and replacing it with a blank string using the `Regular expression` search mode.
+- Optional: Tab the JSON file until it has the correct indentation.
+
