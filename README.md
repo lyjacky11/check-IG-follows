@@ -48,7 +48,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 2. Save the separate JSON data into individual JSON files.
 
-*NOTE: Step 3 applies only to version 1 of the script!*
+- *NOTE: Step 3 applies only to version 1 of the script!*
 
 3. Use Notepad++ `Find & Replace` feature to get the correct JSON syntax:
 
@@ -63,4 +63,4 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 5. Use an online [JSON to CSV Converter](https://www.convertcsv.com/json-to-csv.htm) and convert the files to CSV or Excel format.
 
-Optional: Merge the separate Excel files into one spreadsheet and format the spreadsheet (sorting, styling, etc.) into a user friendly format.
+6. Optional: Merge the separate Excel files into one spreadsheet and format the spreadsheet (sorting, styling, etc.) into a user friendly format.
