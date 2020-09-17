@@ -1,11 +1,12 @@
 # Check IG Follows
 Check the number of followers and followings on a Instagram account. Also calculates the number of users you are not following and users that are not following you.
 
-## Tampermonkey
+## Requirements
 
 - The Tampermonkey extension is required to use this script.
+- The script must be ran on `https://www.instagram.com/{username}` URLs.
 
-[Download Link](https://www.tampermonkey.net/)
+[Download Tampermonkey](https://www.tampermonkey.net/)
 
 ## Changelog
 
