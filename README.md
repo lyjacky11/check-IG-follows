@@ -34,9 +34,9 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 1. Expand the arrays of the data that you want to keep until you see the usernames in the console.
 
-- In version 2 of the script, you should see JSON data in the console instead.
+- In version 2 of the script, you should see JSON data in the console; click `Show more` under each set of JSON data to view the full list.
 
-2. Click on the console log box, and right click until you see a "Save as" option, then save the log to your computer.
+2. In the console log box, right click until you see a `Save as` option, and then save the log to your computer.
 
 3. Clean up the log file by deleting all the lines that do not start with `userscript.html`.
 
