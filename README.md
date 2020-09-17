@@ -7,6 +7,11 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 [Download Link](https://www.tampermonkey.net/)
 
+## Changelog
+
+- Version 2 automatically parses the array data into JSON
+- Colourful console logs
+
 ## Usage
 
 1. Create a new userscript in the Tampermonkey extension.
@@ -29,6 +34,8 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 1. Expand the arrays of the data that you want to keep until you see the usernames in the console.
 
+- In version 2 of the script, you should see JSON data in the console instead.
+
 2. Click on the console log box, and right click until you see a "Save as" option, then save the log to your computer.
 
 3. Clean up the log file by deleting all the lines that do not start with `userscript.html`.
@@ -40,6 +47,8 @@ Check the number of followers and followings on a Instagram account. Also calcul
 1. Use an online [JSON Formatter](https://jsonformatter.curiousconcept.com/) to format the single line JSONs into a readable format.
 
 2. Save the separate JSON data into individual JSON files.
+
+*NOTE: Step 3 applies only to version 1 of the script!*
 
 3. Use Notepad++ `Find & Replace` feature to get the correct JSON syntax:
 
