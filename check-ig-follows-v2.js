@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Check IG Follows
 // @namespace    https://jackyly.ca/
-// @version      2.00
+// @version      2.1
 // @description  Get list of followers and following on Instagram.
 // @author       Jacky Ly
 // @include      https://www.instagram.com/*
@@ -29,6 +29,7 @@
 
 	  let after = null, has_next = true;
 	  while (has_next) {
+        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -41,7 +42,10 @@
 		  followers = followers.concat(res.data.user.edge_followed_by.edges.map(({node}) => {
 			return {
 			  username: node.username,
-			  full_name: node.full_name
+			  full_name: node.full_name,
+              id: node.id,
+              is_private: node.is_private,
+              is_verified: node.is_verified
 			}
 		  }))
 		})
@@ -54,6 +58,7 @@
 	  has_next = true;
 	  after = null;
 	  while (has_next) {
+        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -66,7 +71,10 @@
 		  followings = followings.concat(res.data.user.edge_follow.edges.map(({node}) => {
 			return {
 			  username: node.username,
-			  full_name: node.full_name
+			  full_name: node.full_name,
+              id: node.id,
+              is_private: node.is_private,
+              is_verified: node.is_verified
 			}
 		  }))
 		})
