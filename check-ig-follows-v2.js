@@ -11,7 +11,7 @@
 
 (async function() {
     'use strict';
-    console.log("%cCheck IG Follows written by: Jacky Ly", "color: orange");
+    console.log("%cCheck IG Follows written by: Jacky Ly", "color: yellow");
 
     let username = window.location.pathname.split("/")[1];
 	let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
@@ -51,7 +51,7 @@
 		})
 	  }
       console.log("%cFollowers Count: %s", "color: yellow", followers.length);
-	  console.log("%cFollowers: %s", "color: yellow", JSON.stringify(followers));
+	  console.log("%cFollowers: %s", "color: orange", JSON.stringify(followers));
 
       console.log("%c%s", "color: aqua", "Fetching followings... please wait!");
 
@@ -80,7 +80,7 @@
 		})
 	  }
       console.log("%cFollowings Count: %s", "color: yellow", followings.length);
-	  console.log('%cFollowings: %s', "color: yellow", JSON.stringify(followings));
+	  console.log('%cFollowings: %s', "color: orange", JSON.stringify(followings));
 
       console.log("%cCalculating users that you're not following back... please wait!", "color: aqua");
       for (var i = 0; i < followers.length; i++) {
@@ -91,7 +91,7 @@
             }
       }
       console.log("%cNon-Followings Count: %s", "color: yellow", nonFollowings.length);
-      console.log("%cNon-Followings (users you're not following back): %s", "color: yellow", JSON.stringify(nonFollowings));
+      console.log("%cNon-Followings (users you're not following back): %s", "color: orange", JSON.stringify(nonFollowings));
 
       console.log("%cCalculating users that aren't following you back... please wait!", "color: aqua");
       for (var j = 0; j < followings.length; j++) {
@@ -102,7 +102,7 @@
             }
       }
       console.log("%cNon-Followers Count: %s", "color: yellow", nonFollowers.length);
-      console.log("%cNon-Followers (users aren't following you back): %s", "color: yellow", JSON.stringify(nonFollowers));
+      console.log("%cNon-Followers (users aren't following you back): %s", "color: orange", JSON.stringify(nonFollowers));
 	}
 
 	catch (err) {
