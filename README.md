@@ -12,6 +12,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 - Version 2 automatically parses the array data into JSON
 - Colourful console logs
+- Automatically copies result to clipboard
 
 ## Usage
 
