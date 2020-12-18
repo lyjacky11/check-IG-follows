@@ -29,7 +29,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 - If it's not running, ensure that the script is turned on in Tampermonkey, refresh the page and try again.
 
-*NOTE: The page must be refreshed manually (`Ctrl+F5`) every time you want to fetch data.*
+**NOTE: The page must be refreshed manually (`Ctrl+F5`) every time you want to fetch data.**
 
 ## Save Usernames
 
@@ -49,7 +49,7 @@ Check the number of followers and followings on a Instagram account. Also calcul
 
 2. Save the separate JSON data into individual JSON files.
 
-- *NOTE: Step 3 applies only to version 1 of the script!*
+**NOTE: Step 3 applies only to version 1 of the script!**
 
 3. Use Notepad++ `Find & Replace` feature to get the correct JSON syntax:
 
