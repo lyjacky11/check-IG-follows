@@ -11,7 +11,7 @@
 
 (async function() {
     'use strict';
-    console.log("%cCheck IG Follows written by: Jacky Ly", "color: yellow");
+    console.log("%cCheck IG Follows v2.2 by Jacky Ly", "color: yellow");
 
     let username = window.location.pathname.split("/")[1];
 	let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
@@ -25,11 +25,11 @@
 
 	  console.log("%cUser ID: %s", "color: springgreen", userId);
 
-      console.log("%cFetching followers... please wait!", "color: aqua");
+          console.log("%cFetching followers... please wait!", "color: aqua");
 
 	  let after = null, has_next = true;
 	  while (has_next) {
-        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
+          // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -50,15 +50,15 @@
 		  }))
 		})
 	  }
-      console.log("%cFollowers Count: %s", "color: yellow", followers.length);
+          console.log("%cFollowers Count: %s", "color: yellow", followers.length);
 	  // console.log("%cFollowers: %s", "color: orange", JSON.stringify(followers));
 
-      console.log("%c%s", "color: aqua", "Fetching followings... please wait!");
+          console.log("%c%s", "color: aqua", "Fetching followings... please wait!");
 
 	  has_next = true;
 	  after = null;
 	  while (has_next) {
-        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
+          // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -79,7 +79,7 @@
 		  }))
 		})
 	  }
-      console.log("%cFollowings Count: %s", "color: yellow", followings.length);
+          console.log("%cFollowings Count: %s", "color: yellow", followings.length);
 	  // console.log('%cFollowings: %s', "color: orange", JSON.stringify(followings));
 
       /*
