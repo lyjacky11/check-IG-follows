@@ -106,6 +106,7 @@
       console.log("%cNon-Followers Count: %s", "color: yellow", nonFollowers.length);
       console.log("%cNon-Followers (users aren't following you back): %s", "color: orange", JSON.stringify(nonFollowers));
 
+      /*
       alert("Please click on the screen (outside of console) after clicking OK!");
       setTimeout(async()=>
       await navigator.clipboard.writeText(JSON.stringify(nonFollowers))
@@ -113,8 +114,9 @@
           .catch((error) => { alert(`Copy to clipboard failed! ${error}`) })
       , 2500)
 	}
+      */
 
-	catch (err) {
-      console.error(err);
-	}
+      catch (err) {
+            console.error(err);
+      }
 })();
