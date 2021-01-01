@@ -14,12 +14,12 @@
     console.log("%cCheck IG Follows v2.2 by Jacky Ly", "color: yellow");
 
     let username = window.location.pathname.split("/")[1];
-	let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
+    let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
 
-	try {
-      console.log("%cUsername: %s", "color: springgreen", username);
+    try {
+          console.log("%cUsername: %s", "color: springgreen", username);
 
-      let res = await fetch(`https://www.instagram.com/${username}/?__a=1`);
+          let res = await fetch(`https://www.instagram.com/${username}/?__a=1`);
 	  res = await res.json();
 	  let userId = res.graphql.user.id;
 
