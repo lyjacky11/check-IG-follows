@@ -113,8 +113,8 @@
           .then(() => { alert(`Copied non-followers JSON to clipboard!`) })
           .catch((error) => { alert(`Copy to clipboard failed! ${error}`) })
       , 2500)
-	}
       */
+      }
 
       catch (err) {
             console.error(err);
