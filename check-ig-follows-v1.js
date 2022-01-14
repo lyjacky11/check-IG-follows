@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Check IG Follows
 // @namespace    https://jackyly.ca/
-// @version      1.00
+// @version      1.0
 // @description  Get list of followers and following on Instagram.
 // @author       Jacky Ly
 // @include      https://www.instagram.com/*
