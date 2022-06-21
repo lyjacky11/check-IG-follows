@@ -14,22 +14,22 @@
     console.log("%cCheck IG Follows v2.2 by Jacky Ly", "color: yellow");
 
     let username = window.location.pathname.split("/")[1];
-    let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
+	let followers = [], followings = [], nonFollowings = [], nonFollowers = [];
 
-    try {
-          console.log("%cUsername: %s", "color: springgreen", username);
+	try {
+      console.log("%cUsername: %s", "color: springgreen", username);
 
-          let res = await fetch(`https://www.instagram.com/${username}/?__a=1`);
+      let res = await fetch(`https://www.instagram.com/${username}/?__a=1&__d=dis`);
 	  res = await res.json();
 	  let userId = res.graphql.user.id;
 
 	  console.log("%cUser ID: %s", "color: springgreen", userId);
 
-          console.log("%cFetching followers... please wait!", "color: aqua");
+      console.log("%cFetching followers... please wait!", "color: aqua");
 
 	  let after = null, has_next = true;
 	  while (has_next) {
-          // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
+        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=c76146de99bb02f6415203be841dd25a&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -50,15 +50,15 @@
 		  }))
 		})
 	  }
-          console.log("%cFollowers Count: %s", "color: yellow", followers.length);
+      console.log("%cFollowers Count: %s", "color: yellow", followers.length);
 	  // console.log("%cFollowers: %s", "color: orange", JSON.stringify(followers));
 
-          console.log("%c%s", "color: aqua", "Fetching followings... please wait!");
+      console.log("%c%s", "color: aqua", "Fetching followings... please wait!");
 
 	  has_next = true;
 	  after = null;
 	  while (has_next) {
-          // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
+        // Example Fetch URL: https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables={%22id%22:%22[USER_ID]%22,%22first%22:5000}
 		await fetch(`https://www.instagram.com/graphql/query/?query_hash=d04b0a864b4b54837c0d870b0e77e076&variables=` + encodeURIComponent(JSON.stringify({
 		  id: userId,
 		  include_reel: true,
@@ -79,7 +79,7 @@
 		  }))
 		})
 	  }
-          console.log("%cFollowings Count: %s", "color: yellow", followings.length);
+      console.log("%cFollowings Count: %s", "color: yellow", followings.length);
 	  // console.log('%cFollowings: %s', "color: orange", JSON.stringify(followings));
 
       /*
@@ -106,17 +106,15 @@
       console.log("%cNon-Followers Count: %s", "color: yellow", nonFollowers.length);
       console.log("%cNon-Followers (users aren't following you back): %s", "color: orange", JSON.stringify(nonFollowers));
 
-      /*
       alert("Please click on the screen (outside of console) after clicking OK!");
       setTimeout(async()=>
       await navigator.clipboard.writeText(JSON.stringify(nonFollowers))
           .then(() => { alert(`Copied non-followers JSON to clipboard!`) })
           .catch((error) => { alert(`Copy to clipboard failed! ${error}`) })
       , 2500)
-      */
-      }
+	}
 
-      catch (err) {
-            console.error(err);
-      }
+	catch (err) {
+      console.error(err);
+	}
 })();
